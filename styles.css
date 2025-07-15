@@ -348,3 +348,19 @@ h1 {
   color: #bbb;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input.display {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+}
