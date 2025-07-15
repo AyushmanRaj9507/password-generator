@@ -8,70 +8,73 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">🔒 PassGen</div>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><button id="darkModeBtn">🌙 Dark Mode</button></li>
-  </ul>
-</nav>
+    <nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo">🔒 PassGen</div>
+        <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><button id="darkModeBtn">🌙 Dark Mode</button></li>
+        </ul>
+    </div>
+    </nav>
 
-<div class="container">
-  <h1>Password Generator</h1>
-  <p class="intro-text">
-    Generate strong, secure, and customizable passwords instantly!
-  </p>
 
-  <div class="display-container">
-    <input readonly placeholder="Password" class="display" data-password-display />
-    <button class="copyBtn" data-copy aria-label="Copy Password">
-      <span class="tooltip" data-copy-msg></span>
-      <img src="./copy.svg" alt="copy" width="23" height="23">
-    </button>
-  </div>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <p class="intro-text">
+            Generate strong, secure, and customizable passwords instantly!
+        </p>
 
-  <div class="input-container">
-    <div class="length-container">
-      <p>Password Length</p>
-      <p data-length-number>10</p>
+        <div class="display-container">
+            <input readonly placeholder="Password" class="display" data-password-display />
+            <button class="copyBtn" data-copy aria-label="Copy Password">
+            <span class="tooltip" data-copy-msg></span>
+            <img src="./copy.svg" alt="copy" width="23" height="23">
+            </button>
+        </div>
+
+        <div class="input-container">
+            <div class="length-container">
+            <p>Password Length</p>
+            <p data-length-number>10</p>
+            </div>
+
+            <input type="range" min="1" max="20" class="slider" step="1" data-length-slider>
+
+            <div class="check">
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class="check">
+            <input type="checkbox" id="lowercase">
+            <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+
+            <div class="check">
+            <input type="checkbox" id="numbers">
+            <label for="numbers">Include Numbers</label>
+            </div>
+
+            <div class="check">
+            <input type="checkbox" id="symbols">
+            <label for="symbols">Include Symbols</label>
+            </div>
+
+            <div class="strength-container">
+            <p>Strength</p>
+            <div class="indicator" data-indicator></div>
+            </div>
+
+            <button class="generateButton">Generate Password</button>
+        </div>
     </div>
 
-    <input type="range" min="1" max="20" class="slider" step="1" data-length-slider>
+    <footer class="footer" id="about">
+        <p>&copy; 2025 Password Generator. Built with ❤️ by Ayushman.</p>
+    </footer>
 
-    <div class="check">
-      <input type="checkbox" id="uppercase">
-      <label for="uppercase">Include Uppercase Letters</label>
-    </div>
-
-    <div class="check">
-      <input type="checkbox" id="lowercase">
-      <label for="lowercase">Include Lowercase Letters</label>
-    </div>
-
-    <div class="check">
-      <input type="checkbox" id="numbers">
-      <label for="numbers">Include Numbers</label>
-    </div>
-
-    <div class="check">
-      <input type="checkbox" id="symbols">
-      <label for="symbols">Include Symbols</label>
-    </div>
-
-    <div class="strength-container">
-      <p>Strength</p>
-      <div class="indicator" data-indicator></div>
-    </div>
-
-    <button class="generateButton">Generate Password</button>
-  </div>
-</div>
-
-<footer class="footer" id="about">
-  <p>&copy; 2025 Password Generator. Built with ❤️ by Ayushman.</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
