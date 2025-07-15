@@ -331,3 +331,20 @@ h1 {
     padding: 10px;
   }
 }
+.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark-mode .navbar {
+  background-color: #222;
+}
+
+.dark-mode .footer {
+  background-color: #222;
+}
+
+.dark-mode .intro-text {
+  color: #bbb;
+}
+

@@ -214,3 +214,7 @@ generateBtn.addEventListener('click', () => {
     //calculate strength
     calcStrength();
 });
+const darkModeBtn = document.querySelector("#darkModeBtn");
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
