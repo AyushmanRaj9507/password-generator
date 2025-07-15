@@ -136,6 +136,8 @@ generateBtn.addEventListener("click", () => {
     // shuffle
     password = shufflePassword([...password]);
     passwordDisplay.value = password;
+    passwordDisplay.classList.add("password-fade");
+    setTimeout(() => passwordDisplay.classList.remove("password-fade"), 300);
 
     calcStrength();
 });
