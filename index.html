@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Generator</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">🔒 Password-Generator</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <button class="dark-mode-toggle" id="darkModeBtn">🌙 Dark Mode</button>
-    </nav>
-    <div class="container">
 
-        <h1>Password Generator</h1>
-        <p class="intro-text">
-            Generate strong, secure, and customizable passwords instantly!
-        </p>
+<nav class="navbar">
+  <div class="logo">🔒 PassGen</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><button id="darkModeBtn">🌙 Dark Mode</button></li>
+  </ul>
+</nav>
 
+<div class="container">
+  <h1>Password Generator</h1>
+  <p class="intro-text">
+    Generate strong, secure, and customizable passwords instantly!
+  </p>
 
-        <div class="display-container">
+  <div class="display-container">
+    <input readonly placeholder="Password" class="display" data-password-display />
+    <button class="copyBtn" data-copy aria-label="Copy Password">
+      <span class="tooltip" data-copy-msg></span>
+      <img src="./copy.svg" alt="copy" width="23" height="23">
+    </button>
+  </div>
 
-            <input readonly="" placeholder="Password" class="display" data-passworddisplay="">
+  <div class="input-container">
+    <div class="length-container">
+      <p>Password Length</p>
+      <p data-length-number>10</p>
+    </div>
 
-            <button class="copyBtn" data-copy="">
-                <span class="tooltip" data-copymsg=""></span>
-                <img src="./copy.svg" alt="copy" width="23" height="23">
-            </button>
+    <input type="range" min="1" max="20" class="slider" step="1" data-length-slider>
 
-        </div>
+    <div class="check">
+      <input type="checkbox" id="uppercase">
+      <label for="uppercase">Include Uppercase Letters</label>
+    </div>
 
+    <div class="check">
+      <input type="checkbox" id="lowercase">
+      <label for="lowercase">Include Lowercase Letters</label>
+    </div>
 
-        <div class="input-container">
+    <div class="check">
+      <input type="checkbox" id="numbers">
+      <label for="numbers">Include Numbers</label>
+    </div>
 
-            <!--password length section-->
-            <div class="length-container">
-                <p>Password Length</p>
-                <p data-lengthnumber="">0</p>
-            </div>
-            
-            <!--slider-->
-            <input type="range" min="1" max="20" class="slider" step="1" data-lengthslider="">
+    <div class="check">
+      <input type="checkbox" id="symbols">
+      <label for="symbols">Include Symbols</label>
+    </div>
 
-            <!-- checkboxes-->
-            <div class="check">
-                <input type="checkbox" id="uppercase">
-                <label for="uppercase">Includes Uppercase letters</label>
-            </div>
+    <div class="strength-container">
+      <p>Strength</p>
+      <div class="indicator" data-indicator></div>
+    </div>
 
-            <div class="check">
-                <input type="checkbox" id="lowercase">
-                <label for="lowercase">Includes Lowercase letters</label>
-            </div>
+    <button class="generateButton">Generate Password</button>
+  </div>
+</div>
 
-            <div class="check">
-                <input type="checkbox" id="numbers">
-                <label for="numbers">Includes Numbers </label>
-            </div>
+<footer class="footer" id="about">
+  <p>&copy; 2025 Password Generator. Built with ❤️ by Ayushman.</p>
+</footer>
 
-            <div class="check">
-                <input type="checkbox" id="symbols">
-                <label for="symbols">Includes Symbols </label>
-            </div>
-
-            <!-- strength section-->
-            <div class="strength-container">
-                <p>Strength</p>
-                <div class="indicator" data-indicator=""></div>
-            </div>
-
-            <!-- generate password-->
-            <button class="generateButton">Generate Password</button>
-
-        </div>
-
-    </div> 
-    <footer class="footer">
-        <p>&copy; 2025 Password Generator. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
