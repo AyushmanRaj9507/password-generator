@@ -469,3 +469,8 @@ h1 {
 .password-fade {
   animation: fadeIn 0.3s ease-out;
 }
+.blue-theme {
+  background-color: #e0f7fa;
+  color: #01579b;
+}
+

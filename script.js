@@ -142,11 +142,11 @@ generateBtn.addEventListener("click", () => {
     calcStrength();
 });
 
-// dark mode toggle
-const darkModeBtn = document.querySelector("#darkModeBtn");
-darkModeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-});
+// // dark mode toggle
+// const darkModeBtn = document.querySelector("#darkModeBtn");
+// darkModeBtn.addEventListener("click", () => {
+//     document.body.classList.toggle("dark-mode");
+// });
 // load saved theme
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-mode");
@@ -160,4 +160,8 @@ darkModeBtn.addEventListener("click", () => {
   } else {
     localStorage.setItem("theme", "light");
   }
+});
+const blueThemeBtn = document.querySelector("#blueThemeBtn");
+blueThemeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("blue-theme");
 });
