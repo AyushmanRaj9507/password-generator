@@ -304,3 +304,11 @@ h1 {
   text-decoration: none;
   font-weight: 500;
 }
+.footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
